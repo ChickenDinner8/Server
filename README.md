@@ -19,6 +19,11 @@ Sun Yet-Sen University System Analyze and Design Course Project
 在feature/xxx下开发 -> dev -> master
 
 ## 开发指南
+编程语言 Python3
+使用的框架 Django
+数据库 MySQL
+
+推荐使用IDE如PyCharm进行工作以提高效率
 
 ## 部署
 
