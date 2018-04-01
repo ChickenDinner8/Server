@@ -5,7 +5,9 @@ from django.db import models
 class Menu(models.Model):
     foodName = models.CharField(max_length=200)
     foodPrice = models.DecimalField(max_digits=4, decimal_places=1)
+    foodDescription = models.TextField()
     foodImage = models.ImageField()
+    foodPriority = models.IntegerField()
 
 
 class Order(models.Model):
