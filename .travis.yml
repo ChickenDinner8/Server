@@ -1,7 +1,16 @@
+os: linux
+sudo: required
+
 language: python
 python: '3.6'
 
-install: 
+addons:
+  ssh_known_hosts: 111.230.135.232
+
+before_install:
+    - sudo apt-get install -y sshpass
+
+install:
     - pip install Django
     - pip install Pillow
     - pip install mysqlclient
@@ -9,3 +18,7 @@ install:
 
 script:
   - python3 manage.py test
+
+after_success:
+  - export SSHPASS=$SSH_PASS
+  - sshpass -e ssh $MY_SERVER /home/ubuntu/ChickenDinner/deploy.sh
