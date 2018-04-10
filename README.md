@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ChickenDinner8/Server.svg?branch=master)](https://travis-ci.org/ChickenDinner8/Server)
+
 # SYSU-SAD-CP
 
 Sun Yet-Sen University System Analyze and Design Course Project
