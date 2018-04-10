@@ -24,18 +24,18 @@ SECRET_KEY = 'rbqxqnjcml9#x^&ajxs+yew)$4@p+4smh6m^qwrdh2uuh@)emt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'ServerApp.apps.ServerConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ServerApp.apps.ServerConfig',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +78,8 @@ DATABASES = {
         'NAME': 'chickendinner',
         'USER': 'ChickenDinner8',
         'PASSWORD': 'ChickenDinner8',
-        'HOST': '127.0.0.1',
+        # 'HOST': '127.0.0.1',
+        'HOST': '111.230.135.232',
         'PORT': '3306',
     }
 }
