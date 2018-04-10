@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response
 
 
 def boss(request):
-    return render_to_response("Index.html")
+    return render_to_response("index.html")
 
 
 def customer(request):
