@@ -1,8 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import render_to_response
 
 
 def boss(request):
-    return HttpResponse("Hello Boss")
+    return render_to_response("Index.html")
 
 
 def customer(request):
