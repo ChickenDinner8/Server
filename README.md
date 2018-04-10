@@ -21,7 +21,7 @@ Sun Yet-Sen University System Analyze and Design Course Project
 ## 开发指南
 编程语言 Python3
 使用的框架 Django
-数据库 MySQL
+数据库 MySQL（需要mysqlclient插件）
 
 推荐使用IDE如PyCharm进行工作以提高效率
 
