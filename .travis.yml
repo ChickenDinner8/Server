@@ -35,5 +35,5 @@ deploy:
   on:
     branch: master
 
-after_success:
+after_deploy:
   - sshpass -e ssh $SSH_LOGIN /home/deploy.sh
