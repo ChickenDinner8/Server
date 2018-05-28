@@ -3,10 +3,10 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
-RUN apk add --no-cache --virtual .build-deps python3 python3-dev mariadb-dev jpeg-dev py3-pillow build-base \
-    && apk add --virtual .runtime-deps mariadb-client-libs \
+RUN apk add --no-cache --virtual .build-deps python3-dev mariadb-dev jpeg-dev build-base \
+    && apk add --virtual .runtime-deps python3 py3-pillow mariadb-client-libs \
     && pip3 install -r requirements.txt \
     && apk del .build-deps
-ENTRYPOINT ["python", "manage.py"]
+ENTRYPOINT ["python3", "manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
 EXPOSE 8000
