@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:alpine
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 ADD . /app/
