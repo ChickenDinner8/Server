@@ -3,7 +3,8 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
-RUN apk add --no-cache --virtual .build-deps mariadb-dev build-base \
+RUN apk update \
+    && apk add --no-cache --virtual .build-deps mariadb-dev build-base \
     && apk add jpeg-dev mariadb-client-libs \
     && pip3 install -r requirements.txt \
     && apk del .build-deps

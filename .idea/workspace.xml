@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <ignored path=".idea/ChickenDinner8Server.iml" />
     <ignored path=".idea/misc.xml" />
@@ -480,7 +479,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527524058526</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix image base">
+      <created>1527524379973</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1527524379973</updated>
+    </task>
+    <task id="LOCAL-00033" summary="modify dockerfile">
+      <created>1527524625861</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1527524625861</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -550,7 +563,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change to MySql remote connection" />
     <MESSAGE value="modify Travis CI" />
     <MESSAGE value="add unit test" />
     <MESSAGE value="add CI/CD support" />
@@ -572,10 +584,11 @@
     <MESSAGE value="add jpeg-dev for pillow install" />
     <MESSAGE value="edit travis.yml and fix dockerfile" />
     <MESSAGE value="add py3-pillow for pillow install" />
-    <MESSAGE value="modify dockerfile" />
     <MESSAGE value="change to python3" />
     <MESSAGE value="try to fix pillow error" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to fix pillow error" />
+    <MESSAGE value="fix image base" />
+    <MESSAGE value="modify dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
