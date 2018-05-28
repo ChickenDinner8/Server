@@ -1,10 +1,10 @@
-FROM python:alpine
+FROM python3:alpine
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
-RUN apk add --no-cache --virtual .build-deps python3-dev mariadb-dev jpeg-dev build-base \
-    && apk add --virtual .runtime-deps python3 mariadb-client-libs \
+RUN apk add --no-cache --virtual .build-deps mariadb-dev build-base \
+    && apk add --virtual .runtime-deps jpeg-dev mariadb-client-libs \
     && pip3 install -r requirements.txt \
     && apk del .build-deps
 ENTRYPOINT ["python3", "manage.py"]
