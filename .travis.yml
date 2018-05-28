@@ -5,11 +5,11 @@ branches:
 os: linux
 sudo: required
 
+services:
+  - docker
+
 language: python
 python: '3.6'
-
-addons:
-  ssh_known_hosts: 111.230.135.232
 
 before_install:
     - sudo apt-get install -y sshpass
@@ -23,6 +23,13 @@ install:
 script: true
   #- python3 manage.py test
 
-after_success:
-  - export SSHPASS=$SSH_PASS
-  - sshpass -e ssh $MY_SERVER /home/ubuntu/ChickenDinner/deploy.sh
+before_deploy:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+  - docker build -t "${IMAGE_NAME}" .
+
+deploy:
+  provider: script
+  script: docker push "${IMAGE_NAME}"
+  on:
+    branch: master
+
