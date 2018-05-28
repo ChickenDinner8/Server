@@ -3,8 +3,8 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
-RUN apk add --no-cache --virtual .build-deps mariadb-dev \
-    && pip install -r requirements.txt \
+RUN apk add --no-cache --virtual .build-deps python3 python3-dev mariadb-dev build-base \
+    && pip3 install -r requirements.txt \
     && apk add --virtual .runtime-deps mysql-client \
     && apk del .build-deps
 ENTRYPOINT ["python", "manage.py"]
