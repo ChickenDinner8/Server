@@ -4,7 +4,7 @@ RUN mkdir /app
 ADD . /app/
 WORKDIR /app
 RUN apk add --no-cache --virtual .build-deps mariadb-dev build-base \
-    && apk add --virtual .runtime-deps jpeg-dev mariadb-client-libs \
+    && apk add jpeg-dev mariadb-client-libs \
     && pip3 install -r requirements.txt \
     && apk del .build-deps
 ENTRYPOINT ["python3", "manage.py"]
