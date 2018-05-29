@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response
 
 
 def login(request):
-    return HttpResponse("Please Login")
+    print (request)
 
 
 def boss(request):
