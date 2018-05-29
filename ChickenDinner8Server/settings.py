@@ -79,7 +79,8 @@ DATABASES = {
         'USER': 'ChickenDinner8',
         'PASSWORD': 'ChickenDinner8',
         # 'HOST': '127.0.0.1',
-        'HOST': '111.230.135.232',
+        # 'HOST': '111.230.135.232',
+        'HOST': '206.189.223.252',
         'PORT': '3306',
     }
 }
