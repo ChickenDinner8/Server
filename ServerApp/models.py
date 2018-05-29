@@ -12,6 +12,7 @@ class NormalUser(models.Model):
     open_id = models.CharField(max_length=100)
     avator = models.URLField()
 
+
 class Restaurant(models.Model):
     name = models.CharField(max_length=100)
     image = models.URLField()
@@ -23,9 +24,10 @@ class Food(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField()
     description = models.TextField()
-    image  = models.URLField()
+    image = models.URLField()
     priority = models.IntegerField()
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+
 
 class Order(models.Model):
     userId = models.ForeignKey(NormalUser, on_delete=models.CASCADE)
@@ -36,5 +38,5 @@ class Order(models.Model):
 
 class OrderItem(models.Model):
     orderId = models.ForeignKey(Order, on_delete=models.CASCADE)
-    foodId  = models.ForeignKey(Food, on_delete=models.CASCADE)
+    foodId = models.ForeignKey(Food, on_delete=models.CASCADE)
     num = models.IntegerField()
