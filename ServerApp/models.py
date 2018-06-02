@@ -4,8 +4,9 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class BusinessUser(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    username = models.CharField(max_length=100)
+    username = models.CharField(max_length=100, primary_key=True)
+    password = models.TextField()
+    avator = models.URLField()
 
 
 class NormalUser(models.Model):
@@ -22,7 +23,7 @@ class Restaurant(models.Model):
 
 class Food(models.Model):
     name = models.CharField(max_length=100)
-    price = models.DecimalField()
+    price = models.DecimalField(decimal_places=5, max_digits=10)
     description = models.TextField()
     image = models.URLField()
     priority = models.IntegerField()
@@ -33,7 +34,7 @@ class Order(models.Model):
     userId = models.ForeignKey(NormalUser, on_delete=models.CASCADE)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     time = models.TimeField(auto_now=True)
-    totalPrice = models.DecimalField()
+    totalPrice = models.DecimalField(decimal_places=5, max_digits=10)
 
 
 class OrderItem(models.Model):

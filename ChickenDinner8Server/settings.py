@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -75,14 +75,17 @@ WSGI_APPLICATION = 'ChickenDinner8Server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'chickendinner',
-        'USER': 'ChickenDinner8',
+        'NAME': 'dev',
+        # 'USER': 'ChickenDinner8',
         # 'USER': 'root',
-        'PASSWORD': 'ChickenDinner8',
+        'USER':'jian_jian',
+        'PASSWORD': 'jianjiandb',
         # 'HOST': '127.0.0.1',
         # 'HOST': '111.230.135.232',
-        'HOST': '206.189.223.252',
-        'PORT': '3306',
+        # 'HOST': '206.189.223.252',
+        'HOST':'119.29.146.176',
+        # 'PORT': '3306',
+        'PORT':'6033'
     }
 }
 
