@@ -6,7 +6,7 @@ from . import models
 
 @require_http_methods(["GET", "POST", "DELETE"])
 def login(request):
-    received_data = json.loads(request.body)
+    received_data = json.loads(request.body.decode('utf-8'))
     if request.method == 'POST':
         try:
             user = models.BusinessUser.objects.get(username=received_data['username'], password=received_data['password'])
@@ -35,6 +35,30 @@ def bossUserAdmin(request):
             return HttpResponse(username)
         except:
             return HttpResponse("Not Log In", status=400)
+    elif request.method == "PUT":
+        pass
+
+@require_http_methods(["GET", "POST", "PUT"])
+def req_restaurant(request):
+    if request.method == "POST":
+        received_data = json.loads(request.body.decode('utf-8'))
+        username = request.session['username']
+        newRestaurant = models.Restaurant(name=received_data['name'],
+                                          description=received_data['description'],
+                                          image=received_data['image_url'],
+                                          boss=models.BusinessUser.objects.get(username=username))
+        try:
+            newRestaurant.save(force_insert=True)
+            return HttpResponse("Regist new restaurant successful!")
+        except Exception as err:
+            return HttpResponse(err, status=400)
+    elif request.method == "GET":
+        try:
+            username = request.session['username']
+            restaurants = models.Restaurant.objects.get(username=username)
+            return HttpResponse(restaurants)
+        except Exception as err:
+            return HttpResponse(err, status=400)
     elif request.method == "PUT":
         pass
 
