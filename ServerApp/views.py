@@ -51,14 +51,16 @@ def req_restaurant(request):
             newRestaurant.save(force_insert=True)
             return HttpResponse("Regist new restaurant successful!")
         except Exception as err:
-            return HttpResponse(err, status=400)
+            print(err);
+            return HttpResponse('fail', status=400)
     elif request.method == "GET":
         try:
             username = request.session['username']
             restaurants = models.Restaurant.objects.get(username=username)
             return HttpResponse(restaurants)
         except Exception as err:
-            return HttpResponse(err, status=400)
+            print(err);
+            return HttpResponse('fail', status=400)
     elif request.method == "PUT":
         pass
 
