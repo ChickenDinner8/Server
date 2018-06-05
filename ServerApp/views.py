@@ -4,65 +4,77 @@ from django.views.decorators.http import require_http_methods
 import json
 from . import models
 
+
 @require_http_methods(["GET", "POST", "DELETE"])
 def login(request):
     received_data = json.loads(request.body.decode('utf-8'))
+
     if request.method == 'POST':
-        try:
-            user = models.BusinessUser.objects.get(username=received_data['username'], password=received_data['password'])
+        queryset = models.BusinessUser.objects.filter(username=received_data['username'],
+                                                      password=received_data['password'])
+        if queryset.exists():
+            user = queryset.first()
             request.session['username'] = user.username
             return HttpResponse('Log In')
-        except Exception as err:
-            print(err)
+        else:
             return HttpResponse('Error LogIn', status=400)
+
 
 @require_http_methods(["GET", "POST", "PUT"])
 def bossUserAdmin(request):
     # Create a user
     if request.method == "POST":
         received_data = json.loads(request.body)
-        newUser = models.BusinessUser(username=received_data['username'], password=received_data['password'])
-        try:
-            newUser.save(force_insert=True)
-        except:
-            return HttpResponse("Duplicate Username", status=400)
         # print (received_data)
-        return HttpResponse("Regist new user successful!")
+
+        newUser = models.BusinessUser(username=received_data['username'], password=received_data['password'])
+
+        if not models.BusinessUser.objects.filter(username=newUser.username).exists():
+            newUser.save(force_insert=True)
+            return HttpResponse("Regist new user successful!")
+        else:
+            return HttpResponse("Duplicate Username", status=400)
+
     elif request.method == "GET":
-        try:
-            username = request.session['username']
-            user = models.BusinessUser.objects.get(username=username)
+        username = request.session['username']
+        queryset = models.BusinessUser.objects.filter(username=username)
+
+        if queryset.exists():
             return HttpResponse(username)
-        except:
+        else:
             return HttpResponse("Not Log In", status=400)
+
     elif request.method == "PUT":
         pass
 
+
 @require_http_methods(["GET", "POST", "PUT"])
 def req_restaurant(request):
+    username = request.session['username']
+
     if request.method == "POST":
         received_data = json.loads(request.body.decode('utf-8'))
-        username = request.session['username']
         newRestaurant = models.Restaurant(name=received_data['name'],
                                           description=received_data['description'],
                                           image=received_data['image_url'],
                                           boss=models.BusinessUser.objects.get(username=username))
-        try:
+
+        if not models.Restaurant.objects.filter(name=newRestaurant.name).exists():
             newRestaurant.save(force_insert=True)
             return HttpResponse("Regist new restaurant successful!")
-        except Exception as err:
-            print(err);
+        else:
             return HttpResponse('fail', status=400)
+
     elif request.method == "GET":
-        try:
-            username = request.session['username']
-            restaurants = models.Restaurant.objects.get(username=username)
-            return HttpResponse(restaurants)
-        except Exception as err:
-            print(err);
+        queryset = models.Restaurant.objects.filter(username=username)
+        if queryset.exists():
+            return HttpResponse(queryset.first())
+        else:
             return HttpResponse('fail', status=400)
+
     elif request.method == "PUT":
         pass
+
 
 def boss(request):
     return render_to_response("index.html")

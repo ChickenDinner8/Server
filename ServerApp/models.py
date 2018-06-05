@@ -6,12 +6,12 @@ from django.contrib.auth.models import User
 class BusinessUser(models.Model):
     username = models.CharField(max_length=100, primary_key=True)
     password = models.TextField()
-    avator = models.URLField()
+    avatar = models.URLField()
 
 
 class NormalUser(models.Model):
     open_id = models.CharField(max_length=100)
-    avator = models.URLField()
+    avatar = models.URLField()
 
 
 class Restaurant(models.Model):
