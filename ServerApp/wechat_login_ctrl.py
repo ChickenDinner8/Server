@@ -14,8 +14,8 @@ def wechat_login(request):
         code = received_data['code']
         # nickname = received_data['nickname']
         avatar = received_data['avatar']
-        api = WXAPPAPI(appid='wx705b90272f798f75',
-                       app_secret='68c1f35441727f3480d2c163e84ec7a6')
+        api = WXAPPAPI(appid='wx4ae96ebaaa93e809',
+                       app_secret='4ff3aa9039ec5e2c5b3190f4297646b0')
         try:
             session_info = api.exchange_code_for_session_key(code=code)
             open_id = session_info['openid']
