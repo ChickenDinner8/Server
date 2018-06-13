@@ -45,17 +45,56 @@ def manage_table_order(request, restaurantId, tableId):
         return_result['total_price'] = order.totalPrice
         return_result['detail'] = []
         for item in food_objs:
-            return_result['detail'].append({"food":food_ctrl.food_to_dict(item['food']), "num":item["num"]})
+            return_result['detail'].append({"food": food_ctrl.food_to_dict(item['food']), "num": item["num"]})
         return utils.eatDDJsonResponse(return_result)
+    elif request.method == "GET":
+        if utils.BOSS_USERNAME in request.session:
+            # Get certain boss' restaurant order
+            order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
+                                                         restaurant__boss_id=request.session[utils.BOSS_USERNAME],
+                                                         table=tableId)
+        elif utils.BUYER_USERNAME in request.session:
+            order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
+                                                         restaurant__order__user_id=request.session[utils.BUYER_USERNAME],
+                                                         table=tableId)
 
+        return utils.eatDDJsonResponse(order_queryset_to_array(order_queryset))
     return HttpResponse('OK', status=200)
 
 
 @require_http_methods(["GET"])
 @eatdd_login_required
 def manage_restaurant_order(request, restaurantId):
-    pass
+    if utils.BOSS_USERNAME in request.session:
+        # Get certain boss' restaurant order
+        order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
+                                                     restaurant__boss_id=request.session[utils.BOSS_USERNAME])
+    elif utils.BUYER_USERNAME in request.session:
+        order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
+                                                     restaurant__order__user_id=request.session[utils.BUYER_USERNAME])
+
+    return utils.eatDDJsonResponse(order_queryset_to_array(order_queryset))
 
 
 def order_to_dict(order):
     order_item_queryset = models.OrderItem.objects.filter(order=order)
+    food_queryset = models.Food.objects.filter(orderitem__order=order)
+    return_result = {}
+    return_result['order_id'] = order.pk
+    return_result['restaurant_id'] = order.restaurant_id
+    return_result['table_id'] = order.table
+    return_result['customer_id'] = order.user_id
+    return_result['order_time'] = order.time.__str__()
+    return_result['total_price'] = order.totalPrice
+    return_result['detail'] = []
+    for item in food_queryset:
+        num = order_item_queryset.filter(food=item).first().num
+        return_result['detail'].append({"food": food_ctrl.food_to_dict(item), "num": num})
+    return return_result
+
+
+def order_queryset_to_array(order_queryset):
+    return_result = []
+    for order in order_queryset:
+        return_result.append(order_to_dict(order))
+    return return_result
