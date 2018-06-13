@@ -11,7 +11,7 @@ from . import utils
 def manage_restaurant(request, restaurantId):
     username = request.session['username']
     if request.method == "GET":
-        queryset = models.Restaurant.objects.filter(boss__username=username, pk=restaurantId)
+        queryset = models.Restaurant.objects.filter(pk=restaurantId)
         if queryset.exists():
             return utils.eatDDJsonResponse(restaurant_to_dict(queryset.first()))
         else:
@@ -59,6 +59,6 @@ def restaurant_to_dict(item):
     return {
             "id": item.pk,
             "name": item.name,
-            "location": item.description,
+            "description": item.description,
             "image": item.image
     }

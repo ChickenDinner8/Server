@@ -7,6 +7,7 @@ from . import food_ctrl
 from . import restaurant_ctrl
 from . import wechat_login_ctrl
 from . import order_ctrl
+from . import image_ctrl
 
 urlpatterns = [
     path('boss/session', boss_user_login_ctrl.login, name='api_session'),
@@ -20,6 +21,7 @@ urlpatterns = [
     path('buyer/session', wechat_login_ctrl.wechat_login, name='wechat_login'),
     path('restaurant/orders/<int:restaurantId>/<int:tableId>', order_ctrl.manage_table_order),
     path('restaurant/orders/<int:restaurantId>', order_ctrl.manage_restaurant_order),
+    path('upload_image', image_ctrl.upload_image, name='upload_image'),
     path('restaurant_page', views.boss, name='bossHomepage'),
     path('customer', views.customer, name='customerHomepage'),
 ]

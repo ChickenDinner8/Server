@@ -43,3 +43,7 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     food = models.ForeignKey(Food, on_delete=models.CASCADE)
     num = models.IntegerField()
+
+
+class image(models.Model):
+    data = models.ImageField(upload_to='upload/')
