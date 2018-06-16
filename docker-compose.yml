@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   djangoApp:
@@ -9,9 +9,9 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - nginx-v:/app/nginx-app.conf
-      - uwsgi-v:/app/uwsgi.ini
-      - static-v:/app/static
+      - /app/static:/home/static
+      - /app/nginx-app.conf:/etc/nginx/nginx.conf
+      - /app/uwsgi.ini:/etc/uwsgi/uwsgi.ini
 
   nginx:
     image: nginx:alpine
@@ -19,16 +19,20 @@ services:
       - web
     ports:
      - "80:80"
-    volumes:
-      - nginx-v:/etc/nginx/nginx.conf
-      - uwsgi-v:/etc/uwsgi/uwsgi.ini
-      - static-v:/home/static
+    volumes_from:
+    - djangoApp
+
+  mysql:
+    image: mysql-server:5.7
+    networks:
+      - web
+    ports:
+     - "3306:3306"
+    environment:
+     - MYSQL_DATABASE=chickendinner
+     - MYSQL_USER=ChickenDinner8
+     - MYSQL_PASSWORD=ChickenDinner8
 
 networks:
   web:
     driver: bridge
-
-volumes:
-  static-v:
-  nginx-v:
-  uwsgi-v:
