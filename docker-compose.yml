@@ -10,7 +10,7 @@ services:
       - "8000:8000"
     volumes:
     - static-v:/app/static
-    - nginx-v:/app/nginx-app.conf
+    - nginx-v:/app/nginx_app.conf
     - uwsgi-v:/app/uwsgi.ini
 
   nginx:
