@@ -7,6 +7,10 @@ services:
       - web
     ports:
       - "8000:8000"
+    volumes:
+      - ./nginx-app.conf:/etc/nginx/conf.d
+      - ./uwsgi.ini:/etc/uwsgi/uwsgi.ini
+      - ./static:/home/static
 
   nginx:
     image: nginx:alpine
@@ -14,10 +18,6 @@ services:
       - web
     ports:
      - "80:80"
-    volumes:
-      - ./nginx-app.conf:/etc/nginx/conf.d
-      - ./uwsgi.ini:/etc/uwsgi/uwsgi.ini
-      - ./static:/home/static
 
 networks:
   web:
