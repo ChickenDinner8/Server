@@ -11,6 +11,7 @@ class BusinessUser(models.Model):
 
 class NormalUser(models.Model):
     open_id = models.CharField(max_length=100)
+    # nickname = models.CharField(max_length=100)
     avatar = models.URLField()
 
 
@@ -31,13 +32,18 @@ class Food(models.Model):
 
 
 class Order(models.Model):
-    userId = models.ForeignKey(NormalUser, on_delete=models.CASCADE)
+    user = models.ForeignKey(NormalUser, on_delete=models.CASCADE)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
-    time = models.TimeField(auto_now=True)
+    table = models.IntegerField()
+    time = models.DateTimeField(auto_now=True)
     totalPrice = models.DecimalField(decimal_places=5, max_digits=10)
 
 
 class OrderItem(models.Model):
-    orderId = models.ForeignKey(Order, on_delete=models.CASCADE)
-    foodId = models.ForeignKey(Food, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    food = models.ForeignKey(Food, on_delete=models.CASCADE)
     num = models.IntegerField()
+
+
+class image(models.Model):
+    data = models.ImageField(upload_to='upload/')
