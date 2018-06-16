@@ -8,9 +8,9 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./nginx-app.conf:/etc/nginx/conf.d
-      - ./uwsgi.ini:/etc/uwsgi/uwsgi.ini
-      - ./static:/home/static
+      - nginx-v:/app/nginx-app.conf
+      - uwsgi-v:/app/uwsgi.ini
+      - static-v:/app/static
 
   nginx:
     image: nginx:alpine
@@ -18,7 +18,17 @@ services:
       - web
     ports:
      - "80:80"
+    volumes:
+      - nginx-v:/etc/nginx/conf.d
+      - uwsgi-v:/etc/uwsgi/uwsgi.ini
+      - static-v:/home/static
+
 
 networks:
   web:
     driver: bridge
+
+volumes:
+  static-v:
+  nginx-v:
+  uwsgi-v:
