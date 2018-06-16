@@ -15,7 +15,9 @@ services:
     ports:
      - "80:80"
     volumes:
-      - ./nginx_conf.d:/etc/nginx/conf.d
+      - ./nginx-app.conf:/etc/nginx/conf.d
+      - ./uwsgi.ini:/etc/uwsgi/uwsgi.ini
+      - ./static:/home/static
 
 networks:
   web:
