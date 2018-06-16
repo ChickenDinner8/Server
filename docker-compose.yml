@@ -1,4 +1,5 @@
-version: '2'
+version: '3'
+
 services:
   djangoApp:
     image: raymanng/chickendinner8
@@ -19,10 +20,9 @@ services:
     ports:
      - "80:80"
     volumes:
-      - nginx-v:/etc/nginx/conf.d
+      - nginx-v:/etc/nginx/nginx.conf
       - uwsgi-v:/etc/uwsgi/uwsgi.ini
       - static-v:/home/static
-
 
 networks:
   web:
