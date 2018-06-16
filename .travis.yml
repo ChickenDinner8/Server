@@ -27,7 +27,7 @@ script: true
 
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
-  - docker-compose build .
+  - docker-compose build
 
 deploy:
   provider: script
