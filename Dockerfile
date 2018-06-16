@@ -10,4 +10,3 @@ RUN apk update \
     && apk del .build-deps
 ENTRYPOINT ["python3", "manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
-EXPOSE 8000

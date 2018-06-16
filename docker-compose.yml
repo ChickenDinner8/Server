@@ -1,0 +1,22 @@
+version: '2'
+services:
+  djangoApp:
+    image: raymanng/chickendinner8
+    build: .
+    networks:
+      - web
+    ports:
+      - "8000:8000"
+
+  nginx:
+    image: nginx:alpine
+    networks:
+      - web
+    ports:
+     - "80:80"
+    volumes:
+      - ./nginx_conf.d:/etc/nginx/conf.d
+
+networks:
+  web:
+    driver: bridge
