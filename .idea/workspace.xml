@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx_conf.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChickenDinner8Server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChickenDinner8Server/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/css/app.55f41ce6b1aed51b48667ffcb64bc535.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/app.55f41ce6b1aed51b48667ffcb64bc535.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/css/app.55f41ce6b1aed51b48667ffcb64bc535.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/app.55f41ce6b1aed51b48667ffcb64bc535.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/fonts/ionicons.05acfdb.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/ionicons.05acfdb.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/fonts/ionicons.24712f6.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/ionicons.24712f6.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/fonts/ionicons.2c2ae06.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/ionicons.2c2ae06.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/img/ionicons.621bd38.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/ionicons.621bd38.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/img/logo.d2ac4ef.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/logo.d2ac4ef.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/js/app.32b19eb6c552fc483111.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/app.32b19eb6c552fc483111.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/js/app.32b19eb6c552fc483111.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/app.32b19eb6c552fc483111.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/js/manifest.2ae2e69a05c33dfc65f8.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/js/vendor.69819f9cdcdfcfac2718.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vendor.69819f9cdcdfcfac2718.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/static/js/vendor.69819f9cdcdfcfac2718.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vendor.69819f9cdcdfcfac2718.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="" />
     <ignored path=".idea/ChickenDinner8Server.iml" />
     <ignored path=".idea/misc.xml" />
     <ignored path=".idea/modules.xml" />
@@ -74,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="10" selection-start-line="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="54">
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -101,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="648">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -527,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528207517936</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="try to add nginx">
+      <created>1529150134200</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1529150134200</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -564,16 +551,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32913387" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21102363" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32984293" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2912254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2912254" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
@@ -598,7 +584,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add unit test" />
     <MESSAGE value="add CI/CD support" />
     <MESSAGE value="modify CI/CD support" />
     <MESSAGE value="fix index.html" />
@@ -623,7 +608,8 @@
     <MESSAGE value="fix image base" />
     <MESSAGE value="modify dockerfile" />
     <MESSAGE value="show not abuse exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="show not abuse exceptions" />
+    <MESSAGE value="try to add nginx" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to add nginx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -932,17 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="10" selection-start-line="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="648">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -953,10 +932,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="36">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
