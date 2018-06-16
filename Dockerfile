@@ -5,7 +5,7 @@ ADD . /app/
 WORKDIR /app
 RUN apk update \
     && apk add --no-cache --virtual .build-deps mariadb-dev build-base \
-    && apk add jpeg-dev mariadb-client-libs \
+    && apk add jpeg-dev mariadb-client-libs uwsgi-python3\
     && pip3 install -r requirements.txt \
     && apk del .build-deps
 ENTRYPOINT ["python3", "manage.py"]
