@@ -8,5 +8,4 @@ RUN apk update \
     && apk add jpeg-dev mariadb-client-libs uwsgi-python3\
     && pip3 install -r requirements.txt \
     && apk del .build-deps
-ENTRYPOINT ["python3", "manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+CMD ["uwsgi", "--ini", " /etc/uwsgi/uwsgi.ini"]
