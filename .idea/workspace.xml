@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile_django" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile_django" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/uwsgi.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx_app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx_app.conf" afterDir="false" />
     </list>
     <ignored path=".idea/ChickenDinner8Server.iml" />
     <ignored path=".idea/misc.xml" />
@@ -61,7 +60,7 @@
       <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
+            <state relative-caret-position="162">
               <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
@@ -70,22 +69,22 @@
       <file leaf-file-name="Dockerfile_django" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile_django">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="108">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uwsgi.ini" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uwsgi.ini" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/uwsgi.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nginx_app.conf" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nginx_app.conf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nginx_app.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
@@ -154,9 +153,9 @@
         <option value="$PROJECT_DIR$/ServerApp/views.py" />
         <option value="$PROJECT_DIR$/Dockerfile_nginx" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/nginx_app.conf" />
         <option value="$PROJECT_DIR$/Dockerfile_django" />
         <option value="$PROJECT_DIR$/uwsgi.ini" />
+        <option value="$PROJECT_DIR$/nginx_app.conf" />
       </list>
     </option>
   </component>
@@ -215,17 +214,6 @@
             <path>
               <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="ChickenDinner8" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="ChickenDinner8" type="462c0819:PsiDirectoryNode" />
-              <item name="ChickenDinner8Server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,20 +397,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521983553003</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add CI/CD support">
-      <created>1523368951235</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1523368951235</updated>
-    </task>
-    <task id="LOCAL-00009" summary="modify CI/CD support">
-      <created>1523369825470</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1523369825470</updated>
     </task>
     <task id="LOCAL-00010" summary="fix index.html">
       <created>1523370747815</created>
@@ -753,7 +727,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529212490016</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="try to fix uwsgi error">
+      <created>1529213467778</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1529213467778</updated>
+    </task>
+    <task id="LOCAL-00058" summary="try to fix uwsgi error">
+      <created>1529214266339</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1529214266339</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -795,11 +783,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" visible="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" weight="0.31653544" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.21102363" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32984293" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.295764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.295764" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
@@ -863,7 +851,6 @@
     <MESSAGE value="try to add nginx" />
     <MESSAGE value="fix travis" />
     <MESSAGE value="config nginx and uwsgi" />
-    <MESSAGE value="try to fix uwsgi error" />
     <MESSAGE value="correct some config" />
     <MESSAGE value="add static file to correct container" />
     <MESSAGE value="fix shared volumes" />
@@ -876,7 +863,8 @@
     <MESSAGE value="fix &quot;;&quot; error in nginx config" />
     <MESSAGE value="fix nginx error" />
     <MESSAGE value="try to fix 502 error" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to fix 502 error" />
+    <MESSAGE value="try to fix uwsgi error" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to fix uwsgi error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,13 +908,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ChickenDinner8Server/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServerApp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1136,6 +1117,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ChickenDinner8/ChickenDinner8Server/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="11" selection-start-line="15" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChickenDinner8/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile_django">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile_nginx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1147,34 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChickenDinner8/ChickenDinner8Server/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="11" selection-start-line="15" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile_django">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
     </entry>
