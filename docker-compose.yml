@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile_django
     networks:
       - web
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
 
   nginx:
     image: raymanng/chickendinner8:nginx
