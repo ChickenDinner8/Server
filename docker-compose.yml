@@ -6,25 +6,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_django
-    networks:
-      - web
-    expose:
-      - "8000"
+    ports:
+     - "8000:8000"
 
   nginx:
     image: raymanng/chickendinner8:nginx
     build:
       context: .
       dockerfile: Dockerfile_nginx
-    networks:
-      - web
     ports:
      - "80:80"
 
   mysql:
     image: mysql:5.7
-    networks:
-      - web
     ports:
      - "3306:3306"
     environment:
@@ -32,7 +26,3 @@ services:
      - MYSQL_DATABASE=chickendinner
      - MYSQL_USER=ChickenDinner8
      - MYSQL_PASSWORD=ChickenDinner8
-
-networks:
-  web:
-    driver: bridge
