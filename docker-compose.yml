@@ -1,22 +1,6 @@
 version: '2'
 
 services:
-  djangoApp:
-    image: raymanng/chickendinner8:django
-    build:
-      context: .
-      dockerfile: Dockerfile_django
-    ports:
-     - "8000:8000"
-
-  nginx:
-    image: raymanng/chickendinner8:nginx
-    build:
-      context: .
-      dockerfile: Dockerfile_nginx
-    ports:
-     - "80:80"
-
   mysql:
     image: mysql:5.7
     ports:
@@ -26,3 +10,21 @@ services:
      - MYSQL_DATABASE=chickendinner
      - MYSQL_USER=ChickenDinner8
      - MYSQL_PASSWORD=ChickenDinner8
+
+  djangoApp:
+    image: raymanng/chickendinner8:django
+    build:
+      context: .
+      dockerfile: Dockerfile_django
+    links:
+      - mysql
+
+  nginx:
+    image: raymanng/chickendinner8:nginx
+    build:
+      context: .
+      dockerfile: Dockerfile_nginx
+    links:
+      - djangoApp
+    ports:
+     - "80:80"
