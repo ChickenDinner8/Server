@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile_nginx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChickenDinner8Server/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChickenDinner8Server/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChickenDinner8Server/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChickenDinner8Server/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile_django" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/auth_required_decorator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/boss_user_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/boss_user_login_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/food_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/image_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0002_normaluser_nickname.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0003_remove_normaluser_nickname.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0004_order_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0005_auto_20180613_0322.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0006_auto_20180613_0323.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0007_auto_20180613_0334.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/0008_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/order_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/restaurant_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerApp/wechat_login_ctrl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx_app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx_app.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/uwsgi.ini" afterDir="false" />
-    </list>
+    <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="" />
     <ignored path=".idea/ChickenDinner8Server.iml" />
     <ignored path=".idea/misc.xml" />
     <ignored path=".idea/modules.xml" />
@@ -94,20 +54,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="162">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile_django" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dockerfile_django" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile_django">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="36">
+              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -225,6 +185,11 @@
               <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Server" type="462c0819:PsiDirectoryNode" />
+              <item name="ChickenDinner8" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -237,11 +202,11 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Rayman/PycharmProjects/Server/ServerApp/urls.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChickenDinner8Server/settings.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ChickenDinner8/ChickenDinner8Server" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -626,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529169418686</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="dockerize server">
+      <created>1529204624683</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1529204624683</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -698,7 +670,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix mysqlclient error" />
     <MESSAGE value="fix mysqlclient error again" />
     <MESSAGE value="fix mysqlclient error in docker again" />
     <MESSAGE value="fix mysqlclient error by installing mysql-client" />
@@ -723,7 +694,8 @@
     <MESSAGE value="fix wrong uwsgi ini file path" />
     <MESSAGE value="fix to fix docker shared volumes" />
     <MESSAGE value="fix docker compose file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix docker compose file" />
+    <MESSAGE value="dockerize server" />
+    <option name="LAST_COMMIT_MESSAGE" value="dockerize server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -767,13 +739,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ChickenDinner8Server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChickenDinner8Server/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -989,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile_nginx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1019,8 +977,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile_django">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="36">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChickenDinner8/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
