@@ -1,0 +1,6 @@
+django
+mysqlclient
+Pillow
+pytz
+python-weixin
+simplejson
