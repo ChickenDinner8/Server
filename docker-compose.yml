@@ -1,8 +1,13 @@
 version: '2'
 
+networks:
+  - shared:
+
 services:
   mysql:
     image: mysql:5.7
+    networks:
+      - shared
     ports:
      - "3306:3306"
     environment:
@@ -16,15 +21,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_django
-    links:
-      - mysql
+    networks:
+      - shared
 
   nginx:
     image: raymanng/chickendinner8:nginx
     build:
       context: .
       dockerfile: Dockerfile_nginx
-    links:
-      - djangoApp
+    networks:
+      - shared
     ports:
      - "80:80"
