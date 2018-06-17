@@ -1,9 +1,9 @@
 FROM python:3-alpine
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /home/django_app
-ADD ./ChickenDinner8 /home/django_app
+RUN mkdir /home/ChickenDinner8
+ADD ./ChickenDinner8 /home/ChickenDinner8
 COPY ./uwsgi.ini /home/uwsgi.ini
-WORKDIR /django_app
+WORKDIR /home/ChickenDinner8
 RUN apk update \
     && apk add --no-cache --virtual .build-deps mariadb-dev build-base \
     && apk add jpeg-dev mariadb-client-libs uwsgi uwsgi-python3\
