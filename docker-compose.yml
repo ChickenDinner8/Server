@@ -1,7 +1,8 @@
 version: '2'
 
 networks:
-  - shared:
+  shared:
+    driver: bridge
 
 services:
   mysql:
