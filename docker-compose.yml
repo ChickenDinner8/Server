@@ -2,27 +2,24 @@ version: '2'
 
 services:
   djangoApp:
-    image: raymanng/chickendinner8
-    build: .
+    image: raymanng/chickendinner8:django
+    build:
+      context: .
+      dockerfile: Dockerfile_django
     networks:
       - web
     ports:
       - "8000:8000"
-    volumes:
-    - static-v:/app/static
-    - nginx-v:/app/nginx_app.conf
-    - uwsgi-v:/app/uwsgi.ini
 
   nginx:
-    image: nginx:alpine
+    image: raymanng/chickendinner8:nginx
+    build:
+      context: .
+      dockerfile: Dockerfile_nginx
     networks:
       - web
     ports:
      - "80:80"
-    volumes:
-    - static-v:/home/static
-    - nginx-v:/etc/nginx/nginx.conf
-    - uwsgi-v:/etc/uwsgi/uwsgi.ini
 
   mysql:
     image: mysql:5.7
@@ -39,8 +36,3 @@ services:
 networks:
   web:
     driver: bridge
-
-volumes:
-  static-v:
-  nginx-v:
-  uwsgi-v:
