@@ -33,7 +33,7 @@ def wechat_login(request):
             request.session[utils.BUYER_USERNAME] = user.pk
             return HttpResponse('Log In Success!', status=200)
         except Exception as err:
-            print (err)
+            print(err)
             return HttpResponse('Wechat Log In Fail!', status=500)
 
     if request.method == "GET":

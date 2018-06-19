@@ -4,6 +4,9 @@ networks:
   shared:
     driver: bridge
 
+volumes:
+  static-v:
+
 services:
   mysql:
     image: mysql:5.7
@@ -24,6 +27,8 @@ services:
       dockerfile: Dockerfile_django
     networks:
       - shared
+    volumes:
+      - static-v:/home/static/
 
   nginx:
     image: raymanng/chickendinner8:nginx
@@ -34,3 +39,5 @@ services:
       - shared
     ports:
      - "80:80"
+    volumes:
+      - static-v:/home/static/
