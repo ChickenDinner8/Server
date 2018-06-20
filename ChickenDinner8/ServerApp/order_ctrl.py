@@ -35,7 +35,6 @@ def manage_table_order(request, restaurantId, tableId):
             order_item = models.OrderItem(order=order, food=item['food'], num=item['num'])
             order_item.save()
 
-
         return_result = {}
         return_result['order_id'] = order.pk
         return_result['restaurant_id'] = restaurantId
@@ -55,7 +54,8 @@ def manage_table_order(request, restaurantId, tableId):
                                                          table=tableId)
         elif utils.BUYER_USERNAME in request.session:
             order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
-                                                         restaurant__order__user_id=request.session[utils.BUYER_USERNAME],
+                                                         restaurant__order__user_id=request.session[
+                                                             utils.BUYER_USERNAME],
                                                          table=tableId)
 
         return utils.eatDDJsonResponse(order_queryset_to_array(order_queryset))
