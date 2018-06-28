@@ -27,13 +27,13 @@ script: true
 
 before_deploy:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
-  - docker build -t "${IMAGE_NAME}" .
+  - docker-compose build
 
 deploy:
   provider: script
-  script: docker push "${IMAGE_NAME}"
+  script: docker-compose push
   on:
     branch: master
 
 after_deploy:
-  - sshpass -e ssh $SSH_LOGIN /home/deploy.sh
+  - sshpass -e ssh $SSH_LOGIN "cd /home/rayman/ && /home/rayman/deploy.sh"

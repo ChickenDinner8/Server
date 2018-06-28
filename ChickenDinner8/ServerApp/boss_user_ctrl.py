@@ -4,6 +4,7 @@ from django.views.decorators.http import require_http_methods
 import json
 from ServerApp import models
 
+
 @require_http_methods(["GET", "POST", "PUT"])
 def bossUserAdmin(request):
     # Create a user

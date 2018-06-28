@@ -5,6 +5,7 @@ from ServerApp import models
 from .auth_required_decorator import eatdd_login_required
 from . import utils
 
+
 @require_http_methods(["GET", "PUT", "DELETE"])
 @eatdd_login_required
 def manage_food(request, restaurantId, foodId):
@@ -41,7 +42,7 @@ def create_food(request, restaurantId):
 @require_http_methods(["GET"])
 def get_menu(request, restaurantId):
     queryset = models.Food.objects.filter(restaurant_id=restaurantId)
-    return utils.eatDDJsonResponse({"foods":food_queryset_to_array(queryset)})
+    return utils.eatDDJsonResponse({"foods": food_queryset_to_array(queryset)})
 
 
 def food_to_dict(new_food):
@@ -53,6 +54,7 @@ def food_to_dict(new_food):
         "priority": new_food.priority,
         "image": new_food.image
     }
+
 
 def food_queryset_to_array(queryset):
     foods = []

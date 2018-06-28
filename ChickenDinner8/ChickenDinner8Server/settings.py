@@ -77,15 +77,19 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dev',
         # 'USER': 'ChickenDinner8',
-        # 'USER': 'root',
-        'USER':'jian_jian',
-        'PASSWORD': 'jianjiandb',
-        # 'HOST': '127.0.0.1',
+
         # 'HOST': '111.230.135.232',
         # 'HOST': '206.189.223.252',
-        'HOST': '119.29.146.176',
+
+        # 'USER': 'root',
+        # 'HOST': '127.0.0.1',
+
         # 'PORT': '3306',
-        'PORT':'6033'
+
+        'USER': 'jian_jian',
+        'PASSWORD': 'jianjiandb',
+        'HOST': '119.29.146.176',
+        'PORT': '6033'
     }
 }
 
@@ -123,5 +127,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_ROOT = '/Users/wubowen/Documents/Server/ServerApp/static/upload_image/'
+MEDIA_ROOT = '../static/'
+STATIC_URL = '../static/'

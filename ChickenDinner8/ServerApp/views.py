@@ -76,13 +76,5 @@ def req_restaurant(request):
         pass
 
 
-def boss(request):
-    return render_to_response("index.html")
-
-
-def customer(request):
-    return HttpResponse("Hello Customer")
-
-
 def sendJsonData(msg, status_code=200):
     return HttpResponse(msg, content_type="application/json", status=status_code)

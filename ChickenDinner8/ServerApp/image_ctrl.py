@@ -13,6 +13,5 @@ def upload_image(request):
     print(type(request.FILES['image']))
     image_file = request.FILES['image']
     fs = FileSystemStorage()
-    filename = fs.save(image_file.name, image_file)
-    url = fs.url(filename)
-    return utils.eatDDJsonResponse({'url': '/static/upload_image/' + url})
+    filename = fs.save('../static/img/' + image_file.name, image_file)
+    return utils.eatDDJsonResponse({'url': '/static/img/' + image_file.name})

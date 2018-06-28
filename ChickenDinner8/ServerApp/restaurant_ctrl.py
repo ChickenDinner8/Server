@@ -45,7 +45,7 @@ def create_restaurant(request):
 def get_all_restaurant(request):
     username = request.session[utils.BOSS_USERNAME]
     queryset = models.Restaurant.objects.filter(boss__username=username)
-    return utils.eatDDJsonResponse({"restaurants":restaurant_queryset_to_array(queryset)})
+    return utils.eatDDJsonResponse({"restaurants": restaurant_queryset_to_array(queryset)})
 
 
 def restaurant_queryset_to_array(queryset):
@@ -57,8 +57,8 @@ def restaurant_queryset_to_array(queryset):
 
 def restaurant_to_dict(item):
     return {
-            "id": item.pk,
-            "name": item.name,
-            "description": item.description,
-            "image": item.image
+        "id": item.pk,
+        "name": item.name,
+        "description": item.description,
+        "image": item.image
     }

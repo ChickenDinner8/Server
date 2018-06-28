@@ -7,7 +7,6 @@ from ServerApp import models
 
 @require_http_methods(["GET", "POST", "DELETE"])
 def login(request):
-
     if request.method == 'POST':
         received_data = json.loads(request.body.decode('utf-8'))
         queryset = models.BusinessUser.objects.filter(username=received_data['username'],
