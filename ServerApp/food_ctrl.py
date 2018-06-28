@@ -50,7 +50,8 @@ def food_to_dict(new_food):
         "food_name": new_food.name,
         "description": new_food.description,
         "price": new_food.price,
-        "priority": new_food.priority
+        "priority": new_food.priority,
+        "image": new_food.image
     }
 
 def food_queryset_to_array(queryset):
