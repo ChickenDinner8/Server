@@ -60,8 +60,8 @@
       <file leaf-file-name="nginx_app.conf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nginx_app.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="270">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -384,20 +384,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521983553003</updated>
-    </task>
-    <task id="LOCAL-00034" summary="show not abuse exceptions">
-      <created>1528207517936</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1528207517936</updated>
-    </task>
-    <task id="LOCAL-00035" summary="try to add nginx">
-      <created>1529150134200</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1529150134200</updated>
     </task>
     <task id="LOCAL-00036" summary="try to add nginx">
       <created>1529150406208</created>
@@ -728,7 +714,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530379806631</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="try to fix nginx mime types">
+      <created>1530380510617</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1530380510617</updated>
+    </task>
+    <task id="LOCAL-00084" summary="try to fix nginx mime types">
+      <created>1530381407435</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1530381407436</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1147,8 +1147,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nginx_app.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="270">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
