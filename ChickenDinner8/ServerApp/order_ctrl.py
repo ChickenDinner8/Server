@@ -17,7 +17,7 @@ def manage_table_order(request, restaurantId, tableId):
         # First get the menu of this restaurant
         menu_queryset = models.Food.objects.filter(restaurant_id=restaurantId)
         food_objs = []
-        total_price = 0;
+        total_price = 0
         for item in foods:
             food_queryset = menu_queryset.filter(pk=item['food_id'])
             if food_queryset.exists() is False:
