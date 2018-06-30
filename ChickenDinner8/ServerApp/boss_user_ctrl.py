@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response
 from django.views.decorators.http import require_http_methods
 import json
 from ServerApp import models
-
+import hashlib
 
 @require_http_methods(["GET", "POST", "PUT"])
 def bossUserAdmin(request):
@@ -12,7 +12,7 @@ def bossUserAdmin(request):
         received_data = json.loads(request.body)
         # print (received_data)
 
-        newUser = models.BusinessUser(username=received_data['username'], password=received_data['password'])
+        newUser = models.BusinessUser(username=received_data['username'], password=addSalt(received_data['password']))
 
         if not models.BusinessUser.objects.filter(username=newUser.username).exists():
             newUser.save(force_insert=True)
@@ -31,3 +31,8 @@ def bossUserAdmin(request):
 
     elif request.method == "PUT":
         pass
+
+def addSalt(data):
+    for i in range(10):
+        data = (hashlib.md5((data + "eatDD").encode('utf-8')).hexdigest())
+    return data
