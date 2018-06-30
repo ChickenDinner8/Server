@@ -16,7 +16,9 @@ def manage_food(request, restaurantId, foodId):
         else:
             return HttpResponse("Not exist", status=404)
     elif request.method == 'DELETE':
-        queryset = models.Food.objects.filter(restaurant_id=restaurantId, pk=foodId)
+        queryset = models.Food.objects.filter(restaurant_id=restaurantId,
+                                              pk=foodId,
+                                              restaurant__boss_id=request.session[utils.BOSS_USERNAME])
         if queryset.exists():
             queryset.delete()
             return HttpResponse('Deleted!', status=200)
