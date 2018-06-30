@@ -68,10 +68,10 @@ def manage_restaurant_order(request, restaurantId):
     if utils.BOSS_USERNAME in request.session:
         # Get certain boss' restaurant order
         order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
-                                                     restaurant__boss_id=request.session[utils.BOSS_USERNAME])
+                                                     restaurant__boss_id=request.session[utils.BOSS_USERNAME]).order_by('time').reverse()
     elif utils.BUYER_USERNAME in request.session:
         order_queryset = models.Order.objects.filter(restaurant_id=restaurantId,
-                                                     restaurant__order__user_id=request.session[utils.BUYER_USERNAME])
+                                                     restaurant__order__user_id=request.session[utils.BUYER_USERNAME]).order_by('time').reverse()
 
     return utils.eatDDJsonResponse(order_queryset_to_array(order_queryset))
 
