@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4be5160-126c-4e3c-a34d-eacbb0dfbc51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx_app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx_app.conf" afterDir="false" />
     </list>
     <ignored path=".idea/ChickenDinner8Server.iml" />
     <ignored path=".idea/misc.xml" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="nginx_app.conf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nginx_app.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            <state relative-caret-position="-28">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -384,20 +383,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521983553003</updated>
-    </task>
-    <task id="LOCAL-00036" summary="try to add nginx">
-      <created>1529150406208</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1529150406208</updated>
-    </task>
-    <task id="LOCAL-00037" summary="fix travis">
-      <created>1529150769129</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1529150769129</updated>
     </task>
     <task id="LOCAL-00038" summary="config nginx and uwsgi">
       <created>1529154931694</created>
@@ -728,7 +713,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530381407436</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="try to fix nginx mime types">
+      <created>1530382129440</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1530382129440</updated>
+    </task>
+    <task id="LOCAL-00086" summary="try to fix nginx mime types">
+      <created>1530382579202</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1530382579202</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -765,7 +764,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" weight="0.32843137" />
@@ -1147,8 +1145,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nginx_app.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="-28">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
